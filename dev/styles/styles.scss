@@ -5,48 +5,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
-}
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
-}
-.video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-.video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-}
-.video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-}
-.video-container video.fillWidth {
-    width: 100%;
-}
-
+$blue: #1C1451;
+$grey: #96989C;
 
 body{
     font-family: 'Lato', sans-serif;
@@ -58,60 +18,47 @@ body{
 }
 
 
-
-
-
-
 header{
-    position: relative;
-    .fa-angle-down{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(169, 169, 169, 0.9), rgba(169, 169, 169, 0.2)),url(../../assets/heroimage.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 3px -3px gray;
+    .intro{
+        font-size: 20px;
         position: absolute;
-        color: white;
-        z-index: 5;
         left: 50%;
-        top: 90%;
-        font-size: 40px;
-        cursor: pointer;
-        &:hover{
-            color: deepskyblue;
+        top: 40%;
+        transform: translateX(-50%);
+        color: snow;
+        text-align: center;
+        animation: fadein 4s ease-in;
+        h1{
+            margin: 0;
+            padding: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        p{
+            margin: 10px 0;
+        }
+        i{
+            font-size: 30px;
+            letter-spacing: 12px;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
 }
 
-.intro{
-    font-size: 20px;
-    position: absolute;
-    left: -500px;
-    top: 10%;
-    color: white;
-    z-index: 1;
-    animation: slide 1s forwards;
-    animation-delay: 1s;
-    h1{
-        margin: 0;
-        padding: 0;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
-    p{
-        margin: 10px 0;
-    }
-    i{
-        font-size: 30px;
-        letter-spacing: 12px;
-        cursor: pointer;
-        transition: all 0.5s;
-        &:hover{
-            color: deepskyblue;
-            transform: scale(1.2);
-        }
-    }
-}
-
-@keyframes slide{
-    100%{
-        left: 6%;
-    }
+@keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 
 
@@ -132,7 +79,7 @@ nav{
         padding: 0;
         cursor: pointer;
         &:hover{
-            color: deepskyblue;
+            color: $blue;
         }
     }
 }
@@ -142,18 +89,17 @@ nav{
 
 .about{
     width: 65%;
-    margin: 100px auto;
+    margin: 70px auto 50px auto;
     text-align: center;
     .logo{
-        width: 100px;
-        height: 100px;
+        width: 90px;
         margin: 50px auto;
         img{
             width: 100%;
         }
     }
     h2{
-        font-size: 18px;
+        font-size: 17px;
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
     }
@@ -161,24 +107,47 @@ nav{
 
 
 
+.tech{
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+    i:nth-child(1n+1){
+        font-size: 50px;
+        margin: 0 10px;
+        color: $grey;
+    }
+    i:nth-child(1n+5){
+        color: $blue;
+    }
+}
+
+
+
+
 .portfolio{
     text-align: center;
-    width: 65%;
     margin: 0 auto;
     .item{
+        max-width: 65%;
+        padding: 30px;
         margin: 75px auto;
         display: flex;
         justify-content: flex-end;
+        &:nth-child(2n+1) .portfolioImage{
+            order: 2;
+        }
         .portfolioInfo{
             text-align: center;
             width: 50%;
             align-self: center;
             h3{
                 font-weight: 900;
+                font-size: 23px;
             }
             h4{
                 font-weight: 100;
                 font-size: 14px;
+                word-spacing: 10px;
             }
             p{
                 font-weight: 100;
@@ -195,11 +164,19 @@ nav{
 }
 
 .contact{
-    width: 70%;
+    width: 60%;
     margin: 50px auto;
-    padding: 100px 0;
+    padding: 50px 0;
     background: whitesmoke;
+    text-align: center;
+    h2{
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
     p{
-        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 20px;
     }
 }
