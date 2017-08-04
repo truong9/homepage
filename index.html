@@ -21,12 +21,14 @@
 	</header>
 
 	<nav>
-		<p>About</p>
-		<p>Portfolio</p>
-		<p>Contact</p>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
 	</nav>
 
-	<section class="about wrapper">
+	<section id="about" class="about wrapper">
 		<div class="logo">
 			<img src="assets/logo.png" alt="Tony's personal logo">
 		</div>
@@ -41,10 +43,10 @@
 		<i class="devicon-react-original-wordmark"></i>
 		<i class="devicon-git-plain-wordmark"></i>
 		<i class="devicon-sass-original"></i>
-		<i class="devicon-babel-plain"></i>
+		<i class="devicon-gulp-plain"></i>
 	</section>
 
-	<section class="portfolio">
+	<section id="portfolio" class="portfolio">
 		<div class="item">
 			<div class="portfolioImage">
 				<img src="assets/rostermac.png" alt="">
@@ -64,7 +66,7 @@
 				<h3>Dynamic Templating Web Application</h3>
 				<h4>JavaScript jQuery Handlebars.js API Responsive</h4>
 				<p>Heard a catchy song at the movies but don't know what it is? Find out by using this web application by searching the movie name for soundtracks.</p>
-				<div><a href="">View Live</a></div>
+				<div><a href="http://tonytruong.ca/trackflix" target="_blank">View Live</a></div>
 			</div>
 		</div>
 		<div class="item">
@@ -75,7 +77,7 @@
 				<h3>API Web Application</h3>
 				<h4>JavaScript jQuery API Responsive</h4>
 				<p>Find recipes from your favourite ingredients.</p>
-				<div><a href="">View Live</a></div>
+				<div><a href="http://tonytruong.ca/edacious" target="_blank">View Live</a></div>
 			</div>
 		</div>
 		<div class="item">
@@ -86,7 +88,7 @@
 				<h3>React & Firebase Application with Authentication</h3>
 				<h4>JavaScript React Firebase oAuth Responsive</h4>
 				<p>Organize and schedule basketball games with your friends.</p>
-				<div><a href="">View Live</a></div>
+				<div><a href="https://ball-center.firebaseapp.com" target="_blank">View Live</a></div>
 			</div>
 		</div>
 		<div class="item">
@@ -97,12 +99,12 @@
 				<h3>PSD Conversion</h3>
 				<h4>HTML5 CSS3 Responsive</h4>
 				<p>Pixel perfect.</p>
-				<div><a href="">View Live</a></div>
+				<div><a href="http://tonytruong.ca/over" target="_blank">View Live</a></div>
 			</div>
 		</div>
 	</section>
 
-	<section class="contact">
+	<section id="contact" class="contact">
 		<h2>Get in Touch</h2>
 		<p>contact[at]tonytruong.ca</p>
 	</section>
@@ -110,6 +112,8 @@
 <script src="https://use.fontawesome.com/d72068a2b1.js"></script>
 	
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script src="public/scripts/jquery.inview.min.js"></script>
 	
 <script src="public/scripts/main.js"></script>
 
