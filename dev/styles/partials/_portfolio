@@ -2,7 +2,7 @@
     text-align: center;
     margin: 200px auto;
     .item{
-        max-width: 65%;
+        max-width: 60%;
         padding: 30px;
         margin: 175px auto;
         display: flex;
@@ -51,8 +51,8 @@
         .portfolioImage{
             width: 50%;
             img{
-                padding: 20px;
-                height: 270px;
+                padding: 5px;
+                height: 300px;
             }
         }
     }
