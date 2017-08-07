@@ -24,6 +24,9 @@ header{
         p{
             margin: 10px 0;
         }
+        a{
+            color: white;
+        }
         i{
             font-size: 35px;
             letter-spacing: 12px;
