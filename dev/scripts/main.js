@@ -28,7 +28,7 @@ $('.contact').on('inview', function(event, isInView){
 
 
 var $win = $(window);
-var winH = $win.height() / 2;   // Get the window height.
+var winH = $win.height() / 2;   // Get the window height
 
 $win.on("scroll", function () {
     if ($(this).scrollTop() > winH ) {
@@ -37,5 +37,5 @@ $win.on("scroll", function () {
         $('nav ul li a').css('color', 'white')
     }
 }).on("resize", function(){ // If the user resizes the window
-   winH = $(this).height(); // you'll need the new height value
+   winH = $(this).height();
 });
